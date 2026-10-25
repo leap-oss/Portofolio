@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "./site.css";
+@source "hugo_stats.json";
+
+@theme {
+  --color-ink: #11120f;
+  --color-paper: #f0f0e9;
+  --color-lime: #c7f94a;
+  --color-muted: #a2a49a;
+  --font-sans: "Arial", "Helvetica Neue", sans-serif;
+}

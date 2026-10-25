@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" shape-rendering="crispEdges">
+<rect width="1000" height="700" fill="#c7f94a"/>
+<g fill="none" stroke="#a7d239" stroke-width="1"><path d="M0 100h1000M0 200h1000M0 300h1000M0 400h1000M0 500h1000M0 600h1000M100 0v700M200 0v700M300 0v700M400 0v700M500 0v700M600 0v700M700 0v700M800 0v700M900 0v700"/></g>
+<path d="M310 150h380v55h55v215h-55v55h-55v55H365v-55h-55v-55h-55V205h55z" fill="#22291a"/>
+<path d="M310 205h105v55H310zm275 0h105v55H585zM365 260h50v55h-50zm220 0h50v55h-50z" fill="#c7f94a"/>
+<path d="M310 315h160v55H310zm220 0h160v55H530z" fill="#f0f7dd"/>
+<path d="M470 370h60v55h-60zM420 425h160v50H420z" fill="#91b338"/>
+<g fill="#22291a"><path d="M165 205h25v25h-25zm650 220h25v25h-25zM750 115h20v20h-20zM210 500h20v20h-20z"/></g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#22291a"><text x="45" y="650" font-size="35" font-weight="700" letter-spacing="-1.5">maskui</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">VANILLA, BUT DEEPER.</text></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="#3455c5"/>
+<g fill="none" stroke="#9aaeea" opacity=".25"><circle cx="500" cy="370" r="270"/><circle cx="500" cy="370" r="205"/><path d="M50 520h900M50 190h900M230 70v480M770 70v480"/></g>
+<circle cx="680" cy="200" r="61" fill="#c7f94a"/>
+<g fill="#f0eddb"><path d="M235 380h100v140H235zM350 310h100v210H350zM465 230h70v290h-70zM550 310h100v210H550zM665 380h100v140H665z"/><path d="m330 310 70-80 70 80zm200 0 70-80 70 80z"/><path d="m450 230 50-95 50 95z"/></g>
+<g fill="#3455c5"><path d="M270 410h30v65h-30zM380 350h40v55h-40zM380 430h40v90h-40zM480 275h40v55h-40zM480 355h40v55h-40zM480 435h40v85h-40zM580 350h40v55h-40zM580 430h40v90h-40zM700 410h30v65h-30z"/></g>
+<path d="M215 535h570" stroke="#f0eddb" stroke-width="5"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#f0eddb"><text x="45" y="650" font-size="35" font-weight="700" letter-spacing="-1.5">metro.</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">PUBLIC INFORMATION. CLEARER.</text></g>
+</svg>

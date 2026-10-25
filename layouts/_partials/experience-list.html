@@ -1,0 +1,18 @@
+<div class="experience-list">
+  {{ range hugo.Data.journey.roles }}
+    {{ $role := . }}
+    <article class="experience-row">
+      <p class="experience-date">{{ .period }}</p>
+      <div class="experience-entry">
+        {{ with .logo }}<div class="experience-logo"><img src="{{ . | relURL }}" alt="{{ $role.logo_alt }}" width="447" height="447" loading="lazy" decoding="async"></div>{{ end }}
+        <div class="experience-copy">
+          <p class="experience-type">{{ .type }}</p>
+          <h3>{{ .title }}</h3>
+          <p class="experience-org">{{ .organization }}</p>
+          <p class="experience-summary">{{ .summary }}</p>
+        </div>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </article>
+  {{ end }}
+</div>

@@ -1,0 +1,17 @@
+[[roles]]
+period = "JUN — SEP 2026"
+title = "EDP Staff"
+organization = "Yummy Choice · Indomaret Group"
+logo = "images/experience/yummy-choice.jpg"
+logo_alt = "Yummy Choice logo"
+type = "Operations & data processing"
+summary = "Supported sales and delivery records, production allocations, inventory processes, operational reporting, and routine PC maintenance."
+
+[[roles]]
+period = "JUL — OCT 2025"
+title = "Fullstack Web Developer Intern"
+organization = "Diskominfo Kota Metro"
+logo = "images/experience/diskominfotik-metro.jpg"
+logo_alt = "Diskominfotik Kota Metro logo"
+type = "Web development"
+summary = "Contributed to public web pages, administrative interfaces, CRUD workflows, and data visualization for municipal web systems."

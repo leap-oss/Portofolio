@@ -1,0 +1,9 @@
+{{ if fileExists "node_modules/@tailwindcss/cli/package.json" }}
+  {{ with resources.Get "css/main.css" }}
+    {{ $css := . | css.TailwindCSS (dict "minify" (not hugo.IsDevelopment)) | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
+{{ else }}
+  {{ $css := slice (resources.Get "css/offline-utilities.css") (resources.Get "css/site.css") | resources.Concat "css/portfolio.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ end }}

@@ -1,0 +1,6 @@
+<div class="contact-links">
+  {{ with site.Params.email }}<a href="mailto:{{ . }}"><span><small>EMAIL · GET IN TOUCH</small>{{ . }}</span>{{ partial "icon.html" "mail" }}</a>{{ end }}
+  {{ with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer"><span><small>LINKEDIN</small>{{ site.Params.name }}</span>{{ partial "icon.html" "diagonal" }}</a>{{ end }}
+  <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer"><span><small>PERSONAL GITHUB</small>SkulZOnTheYT</span>{{ partial "icon.html" "diagonal" }}</a>
+  <a href="{{ site.Params.opensource }}" target="_blank" rel="noopener noreferrer"><span><small>OPEN-SOURCE ORGANIZATION</small>LEAP OSS</span>{{ partial "icon.html" "diagonal" }}</a>
+</div>

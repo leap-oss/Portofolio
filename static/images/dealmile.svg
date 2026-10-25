@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="#f4785b"/>
+<g fill="none" stroke="#9e4737" opacity=".22"><path d="M0 175h1000M0 350h1000M0 525h1000M250 0v700M500 0v700M750 0v700"/><circle cx="500" cy="350" r="260"/><circle cx="500" cy="350" r="180"/></g>
+<g fill="#f9f0da"><path d="M280 200h125c83 0 150 67 150 150s-67 150-150 150H280v-90h125a60 60 0 0 0 0-120H280z"/><path d="M720 500H595c-83 0-150-67-150-150s67-150 150-150h125v90H595a60 60 0 0 0 0 120h125z"/></g>
+<path d="M455 350h90" stroke="#11120f" stroke-width="10" stroke-linecap="round"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#27251e"><text x="45" y="650" font-size="35" font-weight="700" letter-spacing="-1.5">dealmile</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">FROM SCOPE TO SHIPPED.</text></g>
+</svg>

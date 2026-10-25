@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" shape-rendering="crispEdges">
+<title>EtherealDumpster — ED</title>
+<defs>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#365b70"/><stop offset="1" stop-color="#83a9a8"/></linearGradient>
+  <pattern id="grass" width="80" height="60" patternUnits="userSpaceOnUse"><rect width="80" height="60" fill="#4b673e"/><path d="M0 0h20v20H0zm40 20h20v20H40z" fill="#607b47"/><path d="M60 0h20v20H60zM0 40h40v20H0z" fill="#3c5734"/></pattern>
+  <pattern id="dirt" width="100" height="80" patternUnits="userSpaceOnUse"><rect width="100" height="80" fill="#584332"/><path d="M0 0h20v20H0zm40 40h40v20H40z" fill="#72543b"/><path d="M60 0h40v20H60zM0 60h40v20H0z" fill="#42362b"/></pattern>
+  <pattern id="stone" width="100" height="80" patternUnits="userSpaceOnUse"><rect width="100" height="80" fill="#424b46"/><path d="M0 0h40v20H0zm60 40h40v20H60z" fill="#525e54"/><path d="M20 40h20v20H20zM60 0h40v20H60z" fill="#303b35"/></pattern>
+</defs>
+<rect width="1000" height="700" fill="url(#sky)"/>
+<path d="M80 100h160v40H80zm600 40h180v40H680zM750 100h70v40h-70z" fill="#d9e5d4" opacity=".5"/>
+<path d="M0 360h100v-60h100v-60h100v60h100v50h100v-100h100v-50h100v50h100v-50h100v-60h100v560H0z" fill="#54705c"/>
+<path d="M0 470h200v-70h100v60h100v50h100v-80h100v-80h100v-70h100v70h100v80h100v270H0z" fill="url(#stone)"/>
+<path d="M0 490h100v70h100v-40h100v60h100v-30h200v-80h100v70h100v-40h100v-60h100v260H0z" fill="url(#dirt)"/>
+<path d="M0 490h100v70h100v-40h100v60h100v-30h200v-80h100v70h100v-40h100v-60h100v60H900v60H800v40H700v-70H600v80H400v30H300v-60H200v40H100v-70H0z" fill="url(#grass)"/>
+<path d="M80 430h20V260H80zM860 320h20V170h-20z" fill="#3c3227"/>
+<path d="M20 210h140v100H20zM800 110h140v110H800z" fill="#314e36"/><path d="M40 180h100v60H40zM820 80h100v60H820z" fill="#41613d"/>
+<rect width="1000" height="700" fill="#0e2018" opacity=".32"/>
+<g fill="#0d2118" opacity=".6" transform="translate(12 14)"><path d="M285 220h190v55H345v50h110v55H345v55h130v55H285zM525 220h90c85 0 125 44 125 135s-40 135-125 135h-90zm60 55v160h30c44 0 65-25 65-80s-21-80-65-80z"/></g>
+<path d="M285 220h190v55H345v50h110v55H345v55h130v55H285zM525 220h90c85 0 125 44 125 135s-40 135-125 135h-90zm60 55v160h30c44 0 65-25 65-80s-21-80-65-80z" fill="#fff"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#fff"><text x="45" y="650" font-size="29" font-weight="700" letter-spacing="-1">ethereal dumpster</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">VANILLA SURVIVAL, BUT DEEPER.</text></g>
+</svg>

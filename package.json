@@ -1,0 +1,17 @@
+{
+  "name": "ahmad-muzaki-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A lightweight Hugo and Tailwind CSS portfolio.",
+  "scripts": {
+    "dev": "hugo server --bind 0.0.0.0 --port 1313 --disableFastRender",
+    "build": "hugo --gc --minify --panicOnWarning",
+    "preview": "hugo server --bind 0.0.0.0 --port 1313 --environment production --disableLiveReload",
+    "check": "node --check assets/js/main.js"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

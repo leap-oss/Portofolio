@@ -1,0 +1,21 @@
+{{- $page := . -}}
+{{- if .Params.logo -}}
+  {{- $src := .Params.logo_remote -}}
+  {{- if fileExists (printf "static/%s" .Params.logo) -}}{{- $src = .Params.logo | relURL -}}{{- end -}}
+  <div class="project-cover project-cover-{{ .Params.art }}">
+    <span class="cover-grid" aria-hidden="true"></span>
+    <div class="project-logo-stage">
+      {{- if and (eq .Params.art "maskui") (fileExists (printf "static/%s" .Params.logo)) -}}
+        {{- with resources.Get "project-logos/maskui.gif" -}}
+          {{- $poster := .Process "resize 360x360 png" -}}
+          <picture><source media="(prefers-reduced-motion: reduce)" srcset="{{ $poster.RelPermalink }}"><img class="project-logo" data-project-logo data-motion-image data-animated-src="{{ $src }}" data-static-src="{{ $poster.RelPermalink }}" src="{{ $src }}" width="360" height="360" alt="{{ $page.Params.cover_alt }}" loading="lazy" decoding="async"></picture>
+        {{- end -}}
+      {{- else -}}
+        <img class="project-logo" data-project-logo src="{{ $src }}" width="360" height="360" alt="{{ .Params.cover_alt }}" loading="lazy" decoding="async">
+      {{- end -}}
+    </div>
+    <span class="cover-wordmark" aria-hidden="true">{{ .Title }}<span>↗</span></span>
+  </div>
+{{- else -}}
+  <img class="project-illustration" src="{{ printf "images/%s.svg" .Params.art | relURL }}" alt="{{ .Params.cover_alt }}" width="1000" height="700" loading="lazy" decoding="async">
+{{- end -}}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#11120f">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Params.name }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default .Params.summary | default site.Params.description }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Params.name }}{{ end }}">
+  <meta property="og:description" content="{{ .Description | default .Params.summary | default site.Params.description }}">
+  <meta property="og:type" content="{{ if eq .Section "projects" }}article{{ else }}website{{ end }}">
+  {{ if hasPrefix site.BaseURL "https://" }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ end }}
+  <link rel="icon" href="{{ "images/favicon.svg" | relURL }}" type="image/svg+xml">
+  {{ with (templates.Defer (dict "key" "styles")) }}{{ partial "styles.html" . }}{{ end }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

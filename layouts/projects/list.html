@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-heading wrap"><p class="section-label">THE COLLECTION / {{ len .RegularPages }} PROJECTS</p><h1>Proof of<br><span class="text-lime">curiosity.</span></h1><div class="page-intro"><p>A selection of web applications, internship contributions, and open-source explorations. Each one taught me something new.</p><a class="text-link" href="{{ site.Params.opensource }}" target="_blank" rel="noopener noreferrer">More on GitHub {{ partial "icon.html" "diagonal" }}</a></div></section>
+<section class="wrap collection-section" aria-label="Project collection">
+  <div class="project-filters flex flex-wrap gap-2" role="group" aria-label="Filter projects">
+    <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All work <span>{{ len .RegularPages }}</span></button>
+    <button type="button" class="filter-button" data-filter="web" aria-pressed="false">Web</button>
+    <button type="button" class="filter-button" data-filter="open-source" aria-pressed="false">Open source</button>
+    <button type="button" class="filter-button" data-filter="internship" aria-pressed="false">Internship</button>
+    <button type="button" class="filter-button" data-filter="development" aria-pressed="false">In development</button>
+  </div>
+  <p class="sr-only" data-filter-status aria-live="polite" aria-atomic="true"></p>
+  <div class="project-grid" data-project-grid>{{ range .RegularPages.ByWeight }}{{ partial "project-card.html" . }}{{ end }}</div>
+</section>
+{{ partial "contact-band.html" . }}
+{{ end }}

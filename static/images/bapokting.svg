@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="#ecd585"/>
+<g stroke="#998b55" opacity=".3"><path d="M200 150h600M200 250h600M200 350h600M200 450h600M200 550h600M250 100v450M400 100v450M550 100v450M700 100v450"/></g>
+<g fill="#343d2d"><rect x="260" y="345" width="75" height="205" rx="3"/><rect x="395" y="270" width="75" height="280" rx="3"/><rect x="530" y="305" width="75" height="245" rx="3"/><rect x="665" y="195" width="75" height="355" rx="3"/></g>
+<path d="m295 270 137-100 135 50 135-100" stroke="#af6042" stroke-width="9" fill="none" stroke-linejoin="round"/>
+<g fill="#af6042"><circle cx="295" cy="270" r="13"/><circle cx="432" cy="170" r="13"/><circle cx="567" cy="220" r="13"/><circle cx="702" cy="120" r="13"/></g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#343d2d"><text x="45" y="650" font-size="35" font-weight="700" letter-spacing="-1.5">bapokting</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">DATA INTO PERSPECTIVE.</text></g>
+</svg>

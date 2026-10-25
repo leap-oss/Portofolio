@@ -1,0 +1,16 @@
+<header class="site-header wrap">
+  <a href="{{ "/" | relURL }}" class="wordmark" aria-label="Ahmad Muzaki, home">{{ site.Params.brand }}<span class="brand-star">{{ partial "icon.html" "star" }}</span></a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="{{ "/projects/" | relURL }}" {{ if eq .Section "projects" }}aria-current="page"{{ end }}>Work <span>01</span></a>
+    <a href="{{ "/about/" | relURL }}" {{ if eq .Section "about" }}aria-current="page"{{ end }}>About <span>02</span></a>
+    <a href="{{ "/experience/" | relURL }}" {{ if eq .Section "experience" }}aria-current="page"{{ end }}>Journey <span>03</span></a>
+  </nav>
+  <a href="{{ partial "contact-url.html" . }}" class="header-contact">Let’s talk {{ partial "icon.html" "diagonal" }}</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+</header>
+<nav class="mobile-nav wrap" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="{{ "/projects/" | relURL }}">Work <span>01</span></a>
+  <a href="{{ "/about/" | relURL }}">About <span>02</span></a>
+  <a href="{{ "/experience/" | relURL }}">Journey <span>03</span></a>
+  <a href="{{ partial "contact-url.html" . }}">Let’s talk {{ partial "icon.html" "diagonal" }}</a>
+</nav>

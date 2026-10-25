@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<title>Fusion Enchanting</title>
+<defs><radialGradient id="glow"><stop stop-color="#8058c4"/><stop offset="1" stop-color="#292039"/></radialGradient><pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0v70" fill="none" stroke="#c3a5ec" stroke-opacity=".12"/></pattern></defs>
+<rect width="1000" height="700" fill="url(#glow)"/><rect width="1000" height="700" fill="url(#grid)"/>
+<g fill="none" stroke="#b59bdf" stroke-opacity=".3"><circle cx="500" cy="330" r="210"/><path d="M180 330h640M500 85v490"/></g>
+<g shape-rendering="crispEdges">
+<g transform="translate(225 160) rotate(-12 95 95)"><path d="M0 10h160v25h25v145H25v-25H0z" fill="#22172f"/><path d="M10 0h155v145H10z" fill="#b789e9"/><path d="M25 15h125v115H25z" fill="#633a8d"/><path d="M25 145h140v25H25z" fill="#e6d9b3"/><path d="M75 35h25v20h20v25h-20v25H75V80H55V55h20z" fill="#d2b3ff"/></g>
+<g transform="translate(595 160) rotate(12 95 95)"><path d="M0 10h160v25h25v145H25v-25H0z" fill="#22172f"/><path d="M10 0h155v145H10z" fill="#88d7db"/><path d="M25 15h125v115H25z" fill="#2f7f87"/><path d="M25 145h140v25H25z" fill="#e6d9b3"/><path d="M75 35h25v20h20v25h-20v25H75V80H55V55h20z" fill="#b5ffff"/></g>
+<path d="M483 210h34v38h38v34h-38v38h-34v-38h-38v-34h38z" fill="#f1e5ae"/>
+<path d="m380 340 85 40-15 20-85-40zm240 0-85 40 15 20 85-40z" fill="#d0b5ff"/>
+<path d="M340 400h320v40H555v45h35v40H410v-40h35v-45h-65z" fill="#17151f"/>
+<path d="M340 385h320v35H340zM455 440h90v40h-90zM425 485h150v25H425z" fill="#a69ab8"/>
+<path d="M340 385h320v12H340zM455 440h16v40h-16z" fill="#d4c5e9"/>
+<g fill="#c7f94a"><path d="M185 365h12v12h-12zM785 350h12v12h-12zM500 115h12v12h-12zM725 470h12v12h-12z"/></g>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#eee5f5"><text x="45" y="650" font-size="32" font-weight="700" letter-spacing="-1">fusion enchanting</text><text x="955" y="650" font-size="11" text-anchor="end" letter-spacing="2">36 FUSIONS. ONE FAMILIAR ANVIL.</text></g>
+</svg>

@@ -1,0 +1,40 @@
+baseURL = "/"
+locale = "en"
+title = "Ahmad Muzaki — Software Developer"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  name = "Ahmad Muzaki"
+  brand = "zaki"
+  description = "Software developer from Lampung, Indonesia. Building practical web applications, backend systems, and open-source tools."
+  location = "Lampung, Indonesia"
+  github = "https://github.com/SkulZOnTheYT"
+  opensource = "https://github.com/leap-oss"
+  linkedin = "https://www.linkedin.com/in/ahmad-mu-zaki/"
+  email = "ahmad.muzaki.dev@gail.com"
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/images/logos"
+    target = "assets/project-logos"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/notwatching/hugo_stats.json"
+    disableWatch = true
+
+[security.exec]
+  allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
+[markup.goldmark.renderer]
+  unsafe = false

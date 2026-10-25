@@ -1,0 +1,11 @@
+<article class="project-card" data-category="{{ delimit .Params.filters " " }}">
+  <a class="project-art art-{{ .Params.art }}" href="{{ .RelPermalink }}" aria-label="Explore {{ .Title }}">
+    {{ partial "project-visual.html" . }}
+    <span class="project-status">{{ .Params.label }}</span>
+    <span class="project-open">{{ partial "icon.html" "diagonal" }}</span>
+  </a>
+  <div class="project-meta flex items-center justify-between gap-3"><span>{{ .Params.kind }}</span><span>{{ .Params.period }}</span></div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }} {{ partial "icon.html" "diagonal" }}</a></h3>
+  <p>{{ .Params.summary }}</p>
+  <ul class="stack-list flex flex-wrap gap-2" aria-label="{{ .Params.stack_label | default "Technologies" }}">{{ range first 4 .Params.stack }}<li>{{ . }}</li>{{ end }}</ul>
+</article>

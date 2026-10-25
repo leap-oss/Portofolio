@@ -1,0 +1,4 @@
+{{ define "main" }}
+<article class="wrap content-page"><header class="page-heading"><p class="section-label">{{ .Params.eyebrow }}</p><h1>{{ .Params.heading }}<br><span class="text-lime">{{ .Params.accent }}</span></h1><p class="content-intro">{{ .Description }}</p></header><div class="prose page-prose">{{ .Content }}</div></article>
+{{ if not .Params.hide_contact_band }}{{ partial "contact-band.html" . }}{{ end }}
+{{ end }}

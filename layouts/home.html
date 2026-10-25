@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-eyebrow flex items-center justify-between gap-4 flex-wrap"><p class="section-label"><span class="status-dot"></span> AHMAD MUZAKI · SOFTWARE DEVELOPER</p><p class="hero-location">LAMPUNG, INDONESIA <span>GMT+7</span></p></div>
+  <div class="hero-title-block">
+    <h1 id="hero-title"><span class="hero-line hero-line-first"><span class="hero-title-text">Good ideas.</span></span><span class="hero-line"><span class="hero-title-text hero-accent">Real software.</span></span></h1>
+    <span class="hero-asterisk" aria-hidden="true">{{ partial "icon.html" "star" }}</span>
+    <span class="hero-note" aria-hidden="true">a little curiosity.<br>a lot of building. <span>↙</span></span>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-intro"><span class="intro-arrow" aria-hidden="true">↳</span><p>I’m Ahmad, a developer turning ideas into practical web apps and open-source tools.<br><span class="text-muted">Built to be used. Made to keep improving.</span></p></div>
+    <div class="hero-actions flex items-center gap-3 flex-wrap"><a class="button button-lime" href="#work">Explore my work {{ partial "icon.html" "diagonal" }}</a><a class="button button-outline" href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer" aria-label="View Ahmad Muzaki on GitHub">{{ partial "icon.html" "github" }}</a></div>
+  </div>
+  <div class="hero-footnote flex items-center justify-between gap-4"><span>FULLSTACK WEB · BACKEND · OPEN SOURCE</span><a href="#work">SCROLL TO EXPLORE ↓</a></div>
+</section>
+<div class="ticker" aria-hidden="true"><div class="ticker-track">{{ range seq 2 }}<span>IDEAS INTO INTERFACES</span><span class="ticker-star">✳</span><span>CODE INTO SOMETHING USEFUL</span><span class="ticker-star">✳</span><span>ALWAYS BUILDING</span><span class="ticker-star">✳</span>{{ end }}</div></div>
+<section class="section wrap" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><div><p class="section-label">01 / SELECTED WORK</p><h2 id="work-title">A few things<br>I’ve put into the world<span class="text-lime">.</span></h2></div><p class="section-aside">Web platforms, community projects,<br>and the occasional Minecraft rabbit hole.</p></div>
+  <div class="project-grid">{{ range first 4 (where site.RegularPages "Section" "projects").ByWeight }}{{ partial "project-card.html" . }}{{ end }}</div>
+  <a class="all-work-link flex items-center justify-between" href="{{ "/projects/" | relURL }}"><span>Explore all projects</span><span class="flex items-center gap-3">THE FULL COLLECTION {{ partial "icon.html" "diagonal" }}</span></a>
+</section>
+<section class="about-section section wrap" aria-labelledby="about-title">
+  <div class="about-side"><p class="section-label">02 / THE PERSON BEHIND THE CODE</p><div class="about-symbol" aria-hidden="true">{{ partial "icon.html" "star" }}</div><p class="mono-caption">CURIOUS BY DEFAULT.<br>DEVELOPER BY PRACTICE.</p></div>
+  <div class="about-main"><h2 id="about-title">Learning by doing.<br>And doing a little<br><span class="text-muted">better every time.</span></h2><p>From computer networking to government web projects and open-source plugins, I learn best by building things people can actually use.</p><p>These days, I’m studying Information Systems at Universitas Terbuka, developing fullstack apps, and exploring what comes next through LEAP OSS.</p><a class="text-link" href="{{ "/about/" | relURL }}">A little more about me {{ partial "icon.html" "arrow" }}</a><div class="skills-row"><span>React / Next.js</span><span>Laravel</span><span>TypeScript</span><span>Java</span><span>PostgreSQL</span></div></div>
+</section>
+<section class="section wrap journey-section" aria-labelledby="journey-title"><div class="section-heading"><div><p class="section-label">03 / THE JOURNEY SO FAR</p><h2 id="journey-title">Different roles.<br>A growing perspective.</h2></div><a class="text-link" href="{{ "/experience/" | relURL }}">Full journey {{ partial "icon.html" "diagonal" }}</a></div>{{ partial "experience-list.html" . }}</section>
+<section class="oss-section wrap"><div><p class="section-label">BUILT IN THE OPEN</p><h2>Small contributions.<br><span class="text-lime">Shared possibilities.</span></h2><p>LEAP OSS is where I explore open-source ideas, starting with Minecraft plugins that make vanilla survival a little deeper.</p><a class="text-link" href="{{ site.Params.opensource }}" target="_blank" rel="noopener noreferrer">Explore LEAP OSS {{ partial "icon.html" "diagonal" }}</a></div><div class="oss-type" aria-hidden="true">LEAP<span>OSS ↗</span></div></section>
+{{ partial "contact-band.html" . }}
+{{ end }}

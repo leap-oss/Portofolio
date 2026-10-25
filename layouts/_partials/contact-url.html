@@ -1,0 +1,3 @@
+{{- $url := "/contact/" | relURL -}}
+{{- with site.Params.email -}}{{- $url = printf "mailto:%s" . -}}{{- end -}}
+{{- return $url -}}

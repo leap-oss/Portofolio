@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="case-study wrap">
+  <a class="text-link back-link" href="{{ "/projects/" | relURL }}">← All projects</a>
+  <header class="case-header">
+    <p class="section-label">{{ .Params.kind }} / {{ .Params.label }}</p>
+    <h1>{{ .Title }}<span class="text-lime">.</span></h1>
+    <p class="case-summary">{{ .Params.summary }}</p>
+    <div class="case-actions">{{ partial "project-links.html" (dict "page" . "variant" "buttons") }}</div>
+    <div class="case-facts">
+      <div><span>ROLE</span><p>{{ .Params.role }}</p></div>
+      <div><span>PERIOD</span><p>{{ .Params.period }}</p></div>
+      <div><span>{{ .Params.stack_label | default "TOOLS & TECHNOLOGIES" }}</span><p>{{ delimit .Params.stack " · " }}</p></div>
+    </div>
+  </header>
+  <figure class="case-cover art-{{ .Params.art }}"><div class="case-cover-visual">{{ partial "project-visual.html" . }}</div><figcaption>{{ .Params.cover_caption | default "Project identity illustration · not a product screenshot" }}</figcaption></figure>
+  {{ with .Params.workflow }}
+    <section class="case-workflow" aria-labelledby="workflow-title">
+      <p class="section-label">{{ $.Params.workflow_label | default "HOW IT WORKS" }}</p>
+      <h2 id="workflow-title">{{ $.Params.workflow_title }}</h2>
+      <ol>{{ range $index, $step := . }}<li><span class="workflow-number">{{ printf "%02d" (add $index 1) }}</span><h3>{{ .title }}</h3><p>{{ .description }}</p></li>{{ end }}</ol>
+    </section>
+  {{ end }}
+  <div class="case-body">
+    <aside class="case-sidebar">
+      <p class="section-label">ON THIS PAGE</p>
+      <div class="case-toc">{{ .TableOfContents }}</div>
+      <p class="section-label case-links-label">EXPLORE THE PROJECT</p>
+      <div class="case-links">{{ partial "project-links.html" (dict "page" . "variant" "links") }}</div>
+    </aside>
+    <div class="prose case-prose">{{ .Content }}</div>
+  </div>
+  {{ $current := . }}
+  {{ $projects := (where site.RegularPages "Section" "projects").ByWeight }}
+  {{ if gt (len $projects) 1 }}
+    {{ $next := index $projects 0 }}
+    {{ range $index, $project := $projects }}{{ if eq .RelPermalink $current.RelPermalink }}{{ $next = index $projects (mod (add $index 1) (len $projects)) }}{{ end }}{{ end }}
+    <a class="case-next" href="{{ $next.RelPermalink }}"><span><small>NEXT PROJECT</small>{{ $next.Title }}</span>{{ partial "icon.html" "arrow" }}</a>
+  {{ end }}
+</article>
+{{ partial "contact-band.html" . }}
+{{ end }}

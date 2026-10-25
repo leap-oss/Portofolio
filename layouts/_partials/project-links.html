@@ -1,0 +1,15 @@
+{{- $page := .page -}}
+{{- $links := slice -}}
+{{- with $page.Params.demo -}}
+  {{- $links = $links | append (dict "url" . "label" "Live demo" "icon" "diagonal") -}}
+{{- end -}}
+{{- with $page.Params.repo -}}
+  {{- $links = $links | append (dict "url" . "label" "Source code" "icon" "github") -}}
+{{- end -}}
+{{- with $page.Params.website -}}
+  {{- $links = $links | append (dict "url" . "label" ($page.Params.website_label | default "Project website") "icon" "diagonal") -}}
+{{- end -}}
+{{- $variant := .variant -}}
+{{- range $index, $link := $links -}}
+  <a class="{{ if eq $variant "buttons" }}button {{ if eq $index 0 }}button-lime{{ else }}button-outline{{ end }}{{ else }}text-link{{ end }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }} {{ partial "icon.html" .icon }}</a>
+{{- end -}}

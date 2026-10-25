@@ -1,0 +1,17 @@
+<footer class="site-footer wrap">
+  <div class="footer-top flex items-center justify-between gap-4 flex-wrap">
+    <a class="wordmark" href="{{ "/" | relURL }}">{{ site.Params.brand }}<span class="text-lime">*</span></a>
+    <p>Built with intention. Always a work in progress.</p>
+    <a class="text-link" href="#main">Back to top ↑</a>
+  </div>
+  <div class="footer-bottom flex items-center justify-between gap-4 flex-wrap">
+    <p>© {{ now.Year }} {{ site.Params.name }}</p>
+    <div class="flex items-center gap-6">
+      <a href="{{ "/contact/" | relURL }}">Contact</a>
+      <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="{{ site.Params.opensource }}" target="_blank" rel="noopener noreferrer">LEAP OSS ↗</a>
+      {{ with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>{{ end }}
+      <button class="motion-toggle" type="button" aria-pressed="false" hidden>{{ partial "icon.html" "pause" }} <span>Pause motion</span></button>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.166.0"
+  NODE_VERSION = "24"
+  NPM_FLAGS = "--include=dev"
+
+[context.production]
+  command = 'hugo --gc --minify --panicOnWarning --baseURL "$URL"'
+
+[context.deploy-preview]
+  command = 'hugo --gc --minify --panicOnWarning --baseURL "$DEPLOY_PRIME_URL"'
+
+[context.branch-deploy]
+  command = 'hugo --gc --minify --panicOnWarning --baseURL "$DEPLOY_PRIME_URL"'
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

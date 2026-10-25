@@ -1,0 +1,11 @@
+{{- $name := . -}}
+<svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{{- if eq $name "arrow" -}}<path d="M5 12h14M12 5l7 7-7 7"/>
+{{- else if eq $name "diagonal" -}}<path d="M6 18 18 6M6 6h12v12"/>
+{{- else if eq $name "github" -}}<path d="M9 19c-4.3 1.3-4.3-2.2-6-2.6m12 5v-3.9c0-1.1-.4-1.8-.8-2.2 2.8-.3 5.8-1.4 5.8-6.3a4.9 4.9 0 0 0-1.3-3.4c.1-.4.5-1.7-.1-3.4 0 0-1.1-.4-3.6 1.3a12.4 12.4 0 0 0-6.5 0C6 1.8 4.9 2.2 4.9 2.2c-.6 1.7-.2 3-.1 3.4A4.9 4.9 0 0 0 3.5 9c0 4.9 3 6 5.8 6.3-.4.4-.8 1.1-.8 2.2v3.9"/>
+{{- else if eq $name "star" -}}<path d="M12 1v22M1 12h22M4.2 4.2l15.6 15.6M4.2 19.8 19.8 4.2" stroke-width="3"/>
+{{- else if eq $name "pause" -}}<path d="M9 5v14M15 5v14"/>
+{{- else if eq $name "play" -}}<path d="m8 5 11 7-11 7z"/>
+{{- else if eq $name "mail" -}}<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>
+{{- end -}}
+</svg>
